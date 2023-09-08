@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="container">
 
@@ -12,44 +13,56 @@
         <p>Mswali code</p>
     </div>
 
-    <div class="form-container">
+    <main class="main-container">
 
-        <div class="div-top">
-            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
-            <p>You <em>know</em> you want to</p>
+        <div class="main-top">
+            <p class="main-top-content">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
+            <p class="main-top-content">You <em>know</em> you want to</p>
         </div>
 
-        <fieldset>
+        <div class="main-center">
+            <fieldset class="column">
+                <legend>Lets do this!</legend>
+                <div class="row">
+                    <label-input-pair>
+                        <label for="first-name">FIRST NAME</label>
+                        <input type="text" id="first-name" name="first-name"  placeholder="Thor" required>
+                    </label-input-pair>
+                    <label-input-pair>
+                        <label for="second-name">SECOND NAME</label>
+                        <input type="text" id="second-name" name="second-name"  placeholder="Odinson" required>
+                    </label-input-pair>
+                </div>
+                <div class="row">
+                    <label-input-pair>
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" required>
+                    </label-input-pair>
+                    <label-input-pair>
+                        <label for="phone">PHONE NUMBER</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </label-input-pair>
+                </div>
+                <div class="row">
+                    <label-input-pair>
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password" required>
+                    </label-input-pair>
+                    <label-input-pair>
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password" required>
+                    </label-input-pair>
+                </div>
+            </fieldset>
+        </div>
 
-            <legend>Lets do this!</legend>
-
-            <label for="first-name">FIRST NAME</label>
-            <input type="text" id="first-name" name="first-name"  placeholder="Thor" required>
-
-            <label for="second-name">SECOND NAME</label>
-            <input type="text" id="second-name" name="second-name"  placeholder="Odinson" required>
-
-            <label for="email">EMAIL</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">PHONE NUMBER</label>
-            <input type="tel" id="phone" name="phone" required>
-
-            <label for="password">PASSWORD</label>
-            <input type="password" id="password" name="password" required>
-
-            <label for="password">PASSWORD</label>
-            <input type="password" id="password" name="password" required>
-
-        </fieldset>
-
-        <div class="div-bottom">
+        <div class="main-bottom">
             <button type="submit">Create Account</button>
 
             <p>Already have an account? Log in</p>
         </div>
 
-    </div>
+    </main>
     
 </body>
 </html>
