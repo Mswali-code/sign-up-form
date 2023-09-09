@@ -6,11 +6,15 @@
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body class="container">
 
     <div class="image-container">
-        <p>Mswali code</p>
+        <div class="image-content">
+            <img src="images/odin-lined.png" alt="Odin lined logo" class="odin-logo">
+            <p>ODIN</p>
+        </div>
     </div>
 
     <main class="main-container">
@@ -20,46 +24,44 @@
             <p class="main-top-content">You <em>know</em> you want to</p>
         </div>
 
-        <div class="main-center">
-            <fieldset class="column">
-                <legend>Lets do this!</legend>
-                <div class="row">
-                    <label-input-pair>
-                        <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name" name="first-name"  placeholder="Thor" required>
-                    </label-input-pair>
-                    <label-input-pair>
-                        <label for="second-name">SECOND NAME</label>
-                        <input type="text" id="second-name" name="second-name"  placeholder="Odinson" required>
-                    </label-input-pair>
+        <fieldset class="main-center">
+            <legend>Lets do this!</legend>
+            <div class="row">
+                <div class="label-input-pair">
+                    <label for="first-name">FIRST NAME</label>
+                    <input type="text" id="first-name" name="first-name"  placeholder="Thor" required pattern="[A-Za-z]+">
                 </div>
-                <div class="row">
-                    <label-input-pair>
-                        <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email" required>
-                    </label-input-pair>
-                    <label-input-pair>
-                        <label for="phone">PHONE NUMBER</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </label-input-pair>
+                <div class="label-input-pair">
+                    <label for="second-name">SECOND NAME</label>
+                    <input type="text" id="second-name" name="second-name"  placeholder="Odinson" required pattern="[A-Za-z]+" >
                 </div>
-                <div class="row">
-                    <label-input-pair>
-                        <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password" required>
-                    </label-input-pair>
-                    <label-input-pair>
-                        <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password" required>
-                    </label-input-pair>
+            </div>
+            <div class="row">
+                <div class="label-input-pair">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                 </div>
-            </fieldset>
-        </div>
+                <div class="label-input-pair">
+                    <label for="phone">PHONE NUMBER</label>
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" >
+                </div>
+            </div>
+            <div class="row">
+                <div class="label-input-pair">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" name="password" required pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$" >
+                </div>
+                <div class="label-input-pair">
+                    <label for="confirm-password">CONFIRM PASSWORD</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$" >
+                </div>
+            </div>
+        </fieldset>
 
         <div class="main-bottom">
-            <button type="submit">Create Account</button>
+            <button type="submit"  id="create-account-button" >Create Account</button>
 
-            <p>Already have an account? Log in</p>
+            <p>Already have an account? <a href="">Log in</a></p>
         </div>
 
     </main>
